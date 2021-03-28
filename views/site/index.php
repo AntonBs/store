@@ -11,7 +11,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a href="/category/<?php echo $categoriesItem['id']?>">
+                                    <a href="http://localhost/store/category/<?php echo $categoriesItem['id']?>">
                                         <?php echo $categoriesItem["name"]?></a>
                                 </h4>
                             </div>
@@ -30,10 +30,15 @@
                             <div class="single-products">
                                 <div class="productinfo text-center">
                                     <img src="./template/images/home/product1.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p><?php echo $latestProductItem['name']?></p>
+                                    <h2><?php echo $latestProductItem['price']?></h2>
+                                    <p>
+                                        <a href="/store/product/<?php echo $latestProductItem['id']?>"><?php echo $latestProductItem['name']?></a>
+                                    </p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                 </div>
+                                <?php if ($latestProductItem['is_new']):?>
+                                <img src="./template/images/home/new.png" class="new" alt=""/>
+                                <?php endif;?>
                             </div>
                         </div>
                     </div>
