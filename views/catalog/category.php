@@ -33,7 +33,7 @@
                                             <img src="../template/images/home/product1.jpg" alt="" />
                                             <h2><?php echo $product['price']?></h2>
                                             <p>
-                                                <a href="/store/product/<?php echo $product['id']?>"><?php echo $product['name']?></a>
+                                                <a href="/store/product/<?php echo $product['id']?>">[<?php echo $product['id']?>]<?php echo $product['name']?></a>
                                             </p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                         </div>
@@ -44,6 +44,9 @@
                                 </div>
                             </div>
                         <?php endforeach;?>
+
+                        <!-- Постраничная навигация -->
+                        <?php echo $pagination->get(); ?>
                     </div><!--features_items-->
 
 
