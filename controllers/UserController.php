@@ -25,13 +25,12 @@ class UserController
                 $errors[] = 'Пароль больше 6-ти символов';
             }
 
-            if (!User::checkEmailExists($email)){
+            if (User::checkEmailExists($email)){
                 $errors[] = 'Такой email уже используется';
             }
 
-
             if ($errors == false){
-                //save user
+                $result = User::register($name, $email, $password) ;
             }
         }
 

@@ -4,7 +4,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-4 padding-right">
-
+                    <?php if($result):?>
+                        <p>Вы зарегкстрированы!</p>
+                    <?php else:?>
                     <?php if(isset($errors) && is_array($errors)):?>
                         <ul>
                             <?php foreach ($errors as $error):?>
@@ -23,6 +25,7 @@
                         </form>
                     </div>
 
+                    <?php endif;?>
                     <br>
                     <br>
                 </div>
